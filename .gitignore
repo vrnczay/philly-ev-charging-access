@@ -1,0 +1,10 @@
+census_key.txt
+data/raw/
+data/cache/
+archive/feasibility_check/data/philly_walk.graphml
+archive/feasibility_check/osm_cache/
+.ipynb_checkpoints/
+_freeze/
+__pycache__/
+
+/.quarto/

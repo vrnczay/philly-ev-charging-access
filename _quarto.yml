@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - analysis/*.ipynb
+
+execute:
+  freeze: auto
+
+website:
+  title: "Plugged In or Left Out?"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - text: Analysis
+        menu:
+          - analysis/01-data.ipynb
+          - analysis/02-access.ipynb
+          - analysis/03-equity.ipynb
+          - analysis/04-opening-dates.ipynb
+          - analysis/05-clusters.ipynb
+    right:
+      - icon: github
+        href: https://github.com/vrnczay/philly-ev-charging-access
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    page-layout: full

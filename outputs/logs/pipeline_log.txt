@@ -1,0 +1,47 @@
+START 2026/11/21 ÷‹¡˘ 14:12:07.12
+block groups: 1338
+stations within 2 mi: 260 | in city: 182 | within 1 mi: 222
+  L2 stations: 226 | DCFC stations: 36 | open_date missing: 0
+tracts: 408 (income missing: 27) | block groups: 1338
+OPA category codes:
+ category_code     category_code_description      n
+            1                 SINGLE FAMILY 463047
+            2                  MULTI FAMILY  41467
+            6                   VACANT LAND  39546
+            3                     MIXED USE  14140
+            4                    COMMERCIAL  12490
+           14         APARTMENTS  > 4 UNITS   4126
+            5                    INDUSTRIAL   3833
+           13     VACANT LAND - RESIDENTIAL   2357
+            8          GARAGE - RESIDENTIAL   1159
+           10                       OFFICES    909
+           12 VACANT LAND - NON-RESIDENTIAL    207
+            7           GARAGE - COMMERCIAL    131
+            9                         HOTEL    109
+           11               SPECIAL PURPOSE    103
+           15                        RETAIL     76
+           16                           NaN     30
+OPA residential: 504514 | with location: 504502 | garage_spaces missing: 10173
+citywide garage share: 0.344
+block groups in analysis universe: 1246 of 1338
+walk: nodes=225986, edges=679700, 557s
+drive: nodes=40704, edges=103763, 212s
+walk graph loaded: 225986 nodes, 63s
+L2 stations: main=195, wide=226, median station snap=21 m
+walk metrics done, 75s
+DCFC stations: 28
+drive metrics done, 22s
+
+Summary (analysis universe):
+       walk_l2_m  walk_l2_wide_m  l2_ports_800  drive_dcfc_m  drive_dcfc_min
+count     1246.0          1246.0        1246.0        1246.0          1246.0
+mean      2078.7          2076.8           2.2        2907.9             3.7
+std       1237.2          1234.0           7.4        1330.8             1.6
+min         37.4            37.4           0.0         168.7             0.1
+25%       1047.8          1047.8           0.0        1835.2             2.4
+50%       1972.9          1972.9           0.0        2791.2             3.5
+75%       2895.5          2895.5           0.0        3891.2             4.8
+max       6430.0          6430.0          67.0        7074.0             8.3
+
+Boundary check: 3 block groups get closer with the 2-mile buffer (max change 1250 m)
+FINISHED 2026/11/21 ÷‹¡˘ 14:27:28.38

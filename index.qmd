@@ -1,0 +1,44 @@
+---
+title: "Plugged In or Left Out?"
+subtitle: "Access to public EV charging in Philadelphia"
+author: "Zhuosi Yang and Veronica Zheng"
+---
+
+## Question
+
+Do residents of lower-income areas with limited off-street parking face longer walks to the nearest public Level 2 charger?
+
+## Approach
+
+- Station inventory: Alternative Fuel Stations API, public and operating, city plus a one-mile buffer
+- Neighborhood data: ACS 2023 five-year (tract income, block group housing type) and OPA garage records
+- Network distances with OSMnx: walk to Level 2, drive to DC fast
+- Group comparisons by income, garage share, and housing type; K-means profiles of limited access
+
+## Key findings
+
+Results cover 1,246 block groups with housing units, 195 public Level 2 stations, and 28 DC fast stations within one mile of the city.
+
+1. **Most residents are not within walking distance of public Level 2 charging.** The median walk from a block group to the nearest station is 1.97 km. In 61% of block groups the walk is more than a mile, and only 18.5% have any Level 2 port within 800 m.
+
+2. **Among block groups where few homes have a garage, lower-income areas are farther from charging.** These are the residents who most depend on public chargers. Lower-income block groups in this group have a median walk of 1,853 m, compared with 1,083 m in higher-income ones. Only 17% have a port within 800 m, compared with 38%. Their median drive to DC fast charging is also longer: 4.1 minutes compared with 2.3 (all differences p < 0.001).
+
+3. **Attached housing compounds the gap.** In lower-income block groups where most units are single-family attached, only 3% have a Level 2 port within 800 m.
+
+4. **Stations in higher-income tracts tend to have opened earlier.** Among operating stations inside the city, the median recorded opening date is July 2023 in higher-income tracts and November 2023 in lower-income tracts (p = 0.009). Every station has a recorded opening date. Closed stations are not in the inventory.
+
+5. **One access profile stands out.** K-means identifies 434 block groups with about 224,000 housing units where almost no homes have a garage, 77% of units are attached, a median 35% of households have no vehicle, and the median walk to Level 2 charging is 2 km. Median tract income in this group is $40,600, the lowest of the five profiles.
+
+### Limitations
+- The station inventory lists only operating stations, so opening dates describe today's network, not its full history.
+- Garage records miss driveways without a garage, so off-street parking is understated.
+- Income is measured at the tract level and assigned to each block group; 17 block groups lack a tract income estimate.
+- Distances are measured from block group centroids, not from individual homes.
+
+## Pages
+
+1. [Data](analysis/01-data.ipynb)
+2. [Access to public charging](analysis/02-access.ipynb)
+3. [Access by income, garages, and housing type](analysis/03-equity.ipynb)
+4. [Station opening dates](analysis/04-opening-dates.ipynb)
+5. [Patterns of limited access](analysis/05-clusters.ipynb)
